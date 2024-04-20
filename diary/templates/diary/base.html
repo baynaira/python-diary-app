@@ -1,0 +1,30 @@
+<!-- diary/templates/diary/base.html -->
+{% load static %}<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diary App</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Diary App</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'diary:entry_list' %}">Home</a></li>
+                <li><a href="{% url 'diary:entry_create' %}">New Entry</a></li>
+                <li><a href="{% url 'diary:logout' %}">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+    <footer>
+        <p>© 2024 DiaryApp. All rights reserved.</p>
+    </footer>
+</body>
+</html>

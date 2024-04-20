@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f4f4f4;
+}
+header {
+    background: #5C67F2;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}header h1 {
+    margin: 0;
+}nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    background-color: #414ABF;
+    color: #e2e2e2;
+}
+
+footer {
+    text-align: center;
+    padding: 20px 10px;
+    background: #222;
+    color: #ddd;
+}
+
+footer p {
+    margin: 0;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: white;
+    border-radius: 8px;
+    position: relative;
+    animation: slideDown 0.5s ease-in-out;
+}
+.register-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.register-form button {
+    background-color: #5C67F2;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.register-form button:hover {
+    background-color: #414ABF;
+}
+
+.register-form input[type="text"],
+.register-form input[type="password"],
+.register-form input[type="email"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form p {
+    margin: 10px 0;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: #5C67F2;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #434aaf;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        padding: 15px;
+    }
+}

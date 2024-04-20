@@ -1,0 +1,18 @@
+{% extends 'diary/base.html' %}
+
+{% block content %}
+<h2>Your Diary Entries</h2>
+<ul>
+  {% for entry in entries %}
+    <li>
+      <strong>{{ entry.date_posted|date:"D d M Y" }}</strong>: {{ entry.content|truncatewords:10 }}
+      - <a href="{% url 'diary:entry_detail' pk=entry.pk %}">View</a>
+      - <a href="{% url 'diary:entry_edit' pk=entry.pk %}">Edit</a>
+      - <a href="{% url 'diary:entry_delete' pk=entry.pk %}">Delete</a>
+    </li>
+  {% empty %}
+    <li>No entries found.</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'diary:entry_create' %}">Add New Entry</a>
+{% endblock %}
